@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Learnly — Online Learning Platform</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header and navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#">Learnly</a>
+      <nav class="nav">
+        <ul class="nav-list">
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#enroll">Enroll</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero banner -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <h1>Learn skills that stick</h1>
+      <p>Flexible, beginner-friendly courses taught by industry mentors. Study at your own pace and build projects you’re proud of.</p>
+      <a class="btn primary" href="#courses">Browse courses</a>
+    </div>
+  </section>
+
+  <main>
+    <!-- Course listings -->
+    <section id="courses" class="section">
+      <div class="container">
+        <h2>Popular courses</h2>
+        <p class="section-intro">Choose from practical, project-first classes. No fluff—just the skills you’ll actually use.</p>
+
+        <div class="course-grid">
+          <!-- Course card 1 -->
+          <article class="course-card">
+            <img src="https://via.placeholder.com/480x280?text=HTML+%26+CSS" alt="HTML and CSS course cover" />
+            <div class="course-content">
+              <h3>HTML & CSS Foundations</h3>
+              <ul class="course-meta">
+                <li><strong>Level:</strong> Beginner</li>
+                <li><strong>Duration:</strong> 4 weeks</li>
+                <li><strong>Price:</strong> ₹1499</li>
+              </ul>
+              <p>Build clean, accessible pages and learn layout basics with Flexbox. Perfect for your first web project.</p>
+              <a class="btn" href="#enroll" aria-label="Enroll in HTML & CSS Foundations">Enroll</a>
+            </div>
+          </article>
+
+          <!-- Course card 2 -->
+          <article class="course-card">
+            <img src="https://via.placeholder.com/480x280?text=C+Programming" alt="C programming course cover" />
+            <div class="course-content">
+              <h3>C Programming Essentials</h3>
+              <ul class="course-meta">
+                <li><strong>Level:</strong> Beginner–Intermediate</li>
+                <li><strong>Duration:</strong> 6 weeks</li>
+                <li><strong>Price:</strong> ₹1999</li>
+              </ul>
+              <p>Master pointers, memory allocation, and modular design through hands-on exercises and test-case matching.</p>
+              <a class="btn" href="#enroll" aria-label="Enroll in C Programming Essentials">Enroll</a>
+            </div>
+          </article>
+
+          <!-- Course card 3 -->
+          <article class="course-card">
+            <img src="https://via.placeholder.com/480x280?text=JavaScript+Basics" alt="JavaScript basics course cover" />
+            <div class="course-content">
+              <h3>JavaScript Basics</h3>
+              <ul class="course-meta">
+                <li><strong>Level:</strong> Beginner</li>
+                <li><strong>Duration:</strong> 5 weeks</li>
+                <li><strong>Price:</strong> ₹1799</li>
+              </ul>
+              <p>Learn core concepts, DOM manipulation, and event-driven interactivity to bring your pages to life.</p>
+              <a class="btn" href="#enroll" aria-label="Enroll in JavaScript Basics">Enroll</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Enrollment form -->
+    <section id="enroll" class="section alt">
+      <div class="container">
+        <h2>Enroll now</h2>
+        <p class="section-intro">Fill out the form and we’ll send a confirmation email with your next steps.</p>
+
+        <form class="enroll-form" action="#" method="post">
+          <div class="form-row">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" placeholder="Your name" required />
+          </div>
+
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com" required />
+          </div>
+
+          <div class="form-row">
+            <label for="course">Select course</label>
+            <select id="course" name="course" required>
+              <option value="">Choose a course…</option>
+              <option value="html-css">HTML & CSS Foundations</option>
+              <option value="c-programming">C Programming Essentials</option>
+              <option value="javascript-basics">JavaScript Basics</option>
+            </select>
+          </div>
+
+          <div class="form-row inline">
+            <div class="checkbox">
+              <input id="terms" name="terms" type="checkbox" required />
+              <label for="terms">I agree to the terms and privacy policy</label>
+            </div>
+          </div>
+
+          <button class="btn primary" type="submit">Submit enrollment</button>
+          <p class="form-note" role="status">You’ll receive a confirmation within 24 hours.</p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Student testimonials -->
+    <section id="testimonials" class="section">
+      <div class="container">
+        <h2>What students say</h2>
+
+        <div class="testimonials">
+          <figure class="testimonial">
+            <blockquote>
+              “The HTML & CSS course was super clear. I built my first site in a week!”
+            </blockquote>
+            <figcaption>
+              — Aisha, <span class="stars" aria-label="Rated 5 out of 5">★★★★★</span>
+            </figcaption>
+          </figure>
+
+          <figure class="testimonial">
+            <blockquote>
+              “Pointers finally clicked. The C exercises matched test cases exactly—so satisfying.”
+            </blockquote>
+            <figcaption>
+              — Rohan, <span class="stars" aria-label="Rated 5 out of 5">★★★★★</span>
+            </figcaption>
+          </figure>
+
+          <figure class="testimonial">
+            <blockquote>
+              “JavaScript felt approachable. Loved the small projects and quick feedback loops.”
+            </blockquote>
+            <figcaption>
+              — Meera, <span class="stars" aria-label="Rated 4 out of 5">★★★★☆</span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2025 Learnly. All rights reserved.</p>
+      <ul class="footer-links">
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#enroll">Contact</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

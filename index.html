@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Recipe Blog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background: #f9f9f9; color: #333;
+    }
+    header {
+      background: #ff7043; color: white;
+      padding: 15px; text-align: center;
+    }
+    nav a {
+      color: white; margin: 0 10px; text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { text-decoration: underline; }
+    .container { width: 90%; max-width: 1000px; margin: 20px auto; }
+    h1, h2 { color: #444; }
+    /* Hero section */
+    .hero {
+      background: #ffe0d1; padding: 40px; text-align: center;
+      border-radius: 8px; margin-bottom: 30px;
+    }
+    .hero h1 { margin: 0; font-size: 2rem; }
+    .hero p { font-size: 1.1rem; color: #555; }
+    .btn {
+      background: #ff7043; color: white; border: none;
+      padding: 10px 15px; border-radius: 5px; cursor: pointer;
+      text-decoration: none; font-weight: bold;
+    }
+    .btn:hover { background: #e85c2a; }
+    /* Search bar */
+    .search-bar { margin: 20px 0; }
+    .search-bar input {
+      width: 100%; padding: 10px; border: 1px solid #ccc;
+      border-radius: 5px; font-size: 16px;
+    }
+    /* Recipe grid */
+    .recipe-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white; border: 1px solid #ddd; border-radius: 8px;
+      overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card img { width: 100%; height: 160px; object-fit: cover; }
+    .card-body { padding: 15px; }
+    .card-body h3 { margin: 0 0 10px; }
+    .badge {
+      display: inline-block; background: #eee; color: #555;
+      padding: 3px 8px; border-radius: 12px; font-size: 12px;
+      margin-right: 5px;
+    }
+    .info { font-size: 14px; color: #777; margin: 5px 0; }
+    .rating {
+      display: flex; gap: 5px; font-size: 20px; color: #ccc;
+    }
+    .rating input { display: none; }
+    .rating label { cursor: pointer; }
+    .rating input:checked ~ label { color: gold; }
+    /* Form */
+    form {
+      background: white; padding: 20px; border-radius: 8px;
+      border: 1px solid #ddd; margin-top: 30px;
+    }
+    form input, form select, form textarea {
+      width: 100%; padding: 10px; margin: 10px 0;
+      border: 1px solid #ccc; border-radius: 5px;
+    }
+    form button {
+      background: #ff7043; color: white; border: none;
+      padding: 10px 15px; border-radius: 5px; cursor: pointer;
+    }
+    form button:hover { background: #e85c2a; }
+    /* Footer */
+    footer {
+      background: #333; color: white; padding: 20px; margin-top: 30px;
+    }
+    footer .footer-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px; text-align: left;
+    }
+    footer h4 { margin-top: 0; }
+    footer a { color: #ff7043; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🍲 My Recipe Blog</h1>
+    <nav>
+      <a href="#recipes">Recipes</a>
+      <a href="#submit">Submit</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Welcome to My Recipe Blog</h1>
+      <p>Discover tasty dishes, rate your favorites, and share your own recipes!</p>
+      <a href="#recipes" class="btn">Explore Recipes</a>
+    </section>
+
+  
+    <section class="search-bar">
+      <input type="text" placeholder="Search recipes (not functional yet)">
+    </section>
+
+    <section id="recipes">
+      <h2>Featured Recipes</h2>
+      <div class="recipe-grid">
+        
+        <div class="card">
+          <img src="omelettevolg.jpg" alt="Masala Omelette">
+          <div class="card-body">
+            <h3>Masala Omelette</h3>
+            <span class="badge">Quick</span>
+            <span class="badge">Indian</span>
+            <p class="info">Time: 10 min | Difficulty: Easy</p>
+            <p>Spicy, fluffy eggs with onions and chilies.</p>
+            <div class="rating">
+              <input type="radio" id="om5" name="om" value="5"><label for="om5">★</label>
+              <input type="radio" id="om4" name="om" value="4" checked><label for="om4">★</label>
+              <input type="radio" id="om3" name="om" value="3"><label for="om3">★</label>
+            </div>
+          </div>
+        </div>
+    
+        <div class="card">
+          <img src="mugcakevlog.jpg" alt="Chocolate Mug Cake">
+          <div class="card-body">
+            <h3>Chocolate Mug Cake</h3>
+            <span class="badge">Dessert</span>
+            <span class="badge">Quick</span>
+            <p class="info">Time: 5 min | Difficulty: Easy</p>
+            <p>Quick dessert made in the microwave.</p>
+            <div class="rating">
+              <input type="radio" id="mc5" name="mc" value="5" checked><label for="mc5">★</label>
+              <input type="radio" id="mc4" name="mc" value="4"><label for="mc4">★</label>
+              <input type="radio" id="mc3" name="mc" value="3"><label for="mc3">★</label>
+            </div>
+          </div>
+        </div>
+        
+        <div class="card">
+          <img src="chanavolg.jpg" alt="Chana Masala">
+          <div class="card-body">
+            <h3>Chana Masala</h3>
+            <span class="badge">Vegan</span>
+            <span class="badge">Indian</span>
+            <p class="info">Time: 35 min | Difficulty: Medium</p>
+            <p>Tangy, spiced chickpea curry perfect with rice.</p>
+            <div class="rating">
+              <input type="radio" id="cm5" name="cm" value="5"><label for="cm5">★</label>
+              <input type="radio" id="cm4" name="cm" value="4" checked><label for="cm4">★</label>
+              <input type="radio" id="cm3" name="cm" value="3"><label for="cm3">★</label>
+            </div>
+          </div>
+        </div>
+  
+        
+        <div class="card">
+          <img src="pastavlog.jpg" alt="Pasta Primavera">
+          <div class="card-body">
+            <h3>Pasta Primavera</h3>
+            <span class="badge">Italian</span>
+            <span class="badge">Vegetarian</span>
+            <p class="info">Time: 25 min | Difficulty: Easy</p>
+            <p>Colorful pasta tossed with fresh seasonal vegetables.</p>
+            <div class="rating">
+              <input type="radio" id="pp5" name="pp" value="5"><label for="pp5">★</label>
+              <input type="radio" id="pp4" name="pp" value="4" checked><label for="pp4">★</label>
+              <input type="radio" id="pp3" name="pp" value="3"><label for="pp3">★</label>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="card">
+          <img src="toastvlog.jpg" alt="Avocado Toast">
+          <div class="card-body">
+            <h3>Avocado Toast</h3>
+            <span class="badge">Breakfast</span>
+            <span class="badge">Healthy</span>
+            <p class="info">Time: 10 min | Difficulty: Easy</p>
+            <p>Crunchy toast topped with creamy avocado and seasoning.</p>
+            <div class="rating">
+              <input type="radio" id="at5" name="at" value="5" checked><label for="at5">★</label>
+              <input type="radio" id="at4" name="at" value="4"><label for="at4">★</label>
+              <input type="radio" id="at3" name="at" value="3"><label for="at3">★</label>
+            </div>
+          </div>
+        </div>
+
+       
+    </section>
+
+    
+    <section id="submit">
+      <h2>Submit Your Recipe</h2>
+      <form>
+        <input type="text" placeholder="Recipe Title" required>
+        <input type="text" placeholder="Your Name" required>
+        <input type="number" placeholder="Cook Time (minutes)" required>
+        <select required>
+          <option value="">Select Difficulty</option>
+          <option>Easy</option>
+          <option>Medium</option>
+          <option>Hard</option>
+        </select>
+        <textarea rows="4" placeholder="Ingredients" required></textarea>
+        <textarea rows="6" placeholder="Steps" required></textarea>
+        <input type="url" placeholder="Image URL (optional)">
+        <button type="submit">Submit Recipe</button>
+      </form>
+    </section>
+  </div>
+
+  
+  <footer>
+    <div class="footer-grid container">
+      <div>
+        <h4>About</h4>
+        <p>This blog is a place to share simple, tasty recipes with friends and family.</p>
+      </div>
+      <div>
+        <h4>Tags</h4>
+        <p>Quick • Dessert • Vegan • Indian • Breakfast • Healthy • Seafood</p>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Email: myrecipeblog@example.com</p>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:20px;">© 2025 My Recipe Blog</p>
+  </footer>
+</body>
+</html>
